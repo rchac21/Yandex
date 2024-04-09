@@ -1,0 +1,21 @@
+.container {
+    display: grid;
+    place-items: center; 
+    gap: 50px
+}
+h1{
+    background-color: rgb(161, 161, 216);
+}
+form{
+    display: grid;
+    place-items: center; 
+    font-size: 1.3em;
+    background-color: rgb(147, 147, 197);
+}
+p{
+    font-size: 1.3em;
+    color: black;
+}
+button{
+   font-size: 0.8em;
+}

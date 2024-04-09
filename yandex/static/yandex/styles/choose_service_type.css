@@ -1,0 +1,29 @@
+.container {
+    display: grid;
+    place-items: center; 
+    gap: 30px;
+}
+button{
+    display: inline;
+    font-size: 1em;
+    background-color: rgb(112, 112, 185);
+}
+p{
+    display: inline;
+    color: blueviolet;
+}
+form{
+    display: grid;
+    place-items: center; 
+    gap: 20px;
+    font-size: 1.2em;
+}
+a{
+    color: blue;
+    padding: 30px;
+    font-size: 1.2em;
+    align-items: center;
+}
+h1{
+   background-color: rgb(161, 161, 216);
+}

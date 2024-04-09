@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Choose Service Type</title>
+    <link rel="stylesheet" href="{% static 'yandex/styles/choose_service_type.css' %}">
+</head>
+<body class="container">
+    <h1>Please choose service type</h1>
+    <form method="post">
+        {% csrf_token %}
+        <div>
+            <button type="submit" name="service_type" value="Economy">Economy</button>
+            <p>{{ distance }} km  -  {{ economy }} Gel</p>
+        </div>
+        <div>
+            <button type="submit" name="service_type" value="Comfort">Comfort</button>
+            <p>{{ distance }} km  -  {{ comfort }} Gel</p>
+        </div>
+        <div>
+            <button type="submit" name="service_type" value="Business">Business</button>
+            <p>{{ distance }} km  -  {{ business }} Gel</p>
+        </div>
+    </form>
+    <div><a href="{% url 'login' %}">Login Page</a></div>
+</body>
+</html>

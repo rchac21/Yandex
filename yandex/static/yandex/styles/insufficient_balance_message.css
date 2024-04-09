@@ -1,0 +1,28 @@
+.container {
+    display: grid;
+    place-items: center; 
+    gap: 50px;
+}
+h1{
+    background-color: rgb(161, 161, 216);
+}
+.pay_cash{
+    display: grid;
+    place-items: center; 
+    gap: 10px;
+    font-size: 1.5em;
+    background-color: rgb(138, 201, 138)
+}
+.links{
+    display: grid;
+    place-items: center; 
+    gap: 10px;
+    font-size: 1.2em;
+    margin-top: 30px;
+}
+a{
+    color: blue;
+}
+button{
+    color: blue;
+}

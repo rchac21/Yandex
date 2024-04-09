@@ -1,0 +1,47 @@
+.container {
+    display: grid;
+    gap: 40px;
+} 
+h1{
+    background-color: rgb(161, 161, 216);
+    text-align: center;
+}
+p{
+    color: rgb(82, 82, 114);
+    display: inline;
+ }
+ a{
+    color: blue;
+ }
+.links{
+    display: inline;
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 10px;
+ }
+ .links div{
+    margin-top: 10px;
+ }
+ button{
+    color: black;
+    display: inline;
+    font-size: 1em;
+    background-color: rgb(165, 115, 212)
+ }
+.delete_txt{
+    display: inline;
+    font-size: 1.2em;
+}
+.login{
+    text-align: center;
+    font-size: 1.2em;
+    color: blue;
+    margin-top: 30px;
+}
+.cont2{
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+.cont2 .cont2a{
+    font-size: 0.83em;
+}

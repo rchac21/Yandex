@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{ text2 }}</title>
+    <link rel="stylesheet" href="{% static 'yandex/styles/add_or_change_account_number.css' %}">
+</head>
+<body class="container">
+    <h1>{{ text2 }}</h1>
+    <div>
+        <p>{{ text }}</p>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'yandex/styles/login.css' %}">
+</head>
+<body class="container">
+    <h1>Login Page</h1>
+    <form method="post">
+        {% csrf_token %}
+        <p>{{ form.as_p }}</p>
+        <button type="submit">Login</button>
+    </form>
+    <div class="links">
+        <div><a href="{% url 'registrationtype' %}">Registration</a></div> 
+        <div><a href="{% url 'delete' %}">Delete Account</a></div>
+    </div>
+</body>
+</html>

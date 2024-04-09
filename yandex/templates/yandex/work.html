@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Work</title>
+    <link rel="stylesheet" href="{% static 'yandex/styles/work.css' %}">
+</head>
+<body class="container">
+    <h1>Calls</h1>
+    <form method="post">
+        <div class="calls">
+            {% csrf_token %}
+            {% if is_calls %}
+            {% for i in list %}
+                <div>
+                    <p>Name: {{ i.0 }},  Distance from you to client: {{ i.2 }} km  -  Time: {{ i.4 }} minute,  Distance: {{ i.3 }} km  -  Time: {{ i.5 }} minute,  Amount: {{ i.6 }} Gel</p>
+                    <button type="submit" name="receive" value="{{ i.1 }}">Receive Call</button>
+                </div>
+            {% endfor %}
+            {% else %}
+            <p>There are no calls</p>
+            {% endif %}  
+        </div>
+        <div class="delete_work">
+            <p>if you aren't work click this button</p>
+            <button type="submit" name="delete_work" value="delete">Delete Work</button>
+        </div>
+    </form>
+    <a href="{% url 'login' %}">Login Page</a>
+</body>
+</html>

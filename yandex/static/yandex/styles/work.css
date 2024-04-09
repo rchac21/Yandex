@@ -1,0 +1,28 @@
+.container {
+    display: grid;
+    place-items: center; 
+    gap: 30px;
+}
+h1{
+    color: blue;
+}
+p{
+    display: inline;
+    background-color: aqua;
+}
+button{
+    display: inline;
+    color: blue;
+}
+.calls{
+    display: grid;
+    gap: 20px;
+}
+.delete_work{
+    margin-top: 50px;
+}
+a{
+    margin-top: 30px;
+    font-size: 1.2em;
+    color: rgb(77, 77, 211);
+}

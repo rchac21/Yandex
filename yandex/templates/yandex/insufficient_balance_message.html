@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Balance Message</title>
+    <link rel="stylesheet" href="{% static 'yandex/styles/insufficient_balance_message.css' %}">
+</head>
+<body class="container">
+    <h1>Insufficient Balance Message</h1>
+    <div class="pay_cash">
+        <p>you aren't insufficient balance on card</p>
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" name="payment_method" value="cash">Cash Payment</button>
+        </form>
+    </div>
+    <div class="links">
+        {% if check %}
+        <div><a href="{% url 'process_for_orderers' personal_id %}">Main Page</a></div>
+        {% else %}
+        <div><a href="{% url 'process_for_users' personal_id %}">Main Page</a></div>
+        {% endif %}
+        <div><a href="{% url 'login' %}">Login Page</a></div>
+    </div>
+</body>
+</html>

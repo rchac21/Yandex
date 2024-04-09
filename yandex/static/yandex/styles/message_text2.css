@@ -1,0 +1,17 @@
+.container {
+    display: grid;
+    place-items: center; 
+    gap: 30px
+}
+a{
+    color: blue;
+    font-size: 1.3em;
+ }
+ h1{
+    color: rebeccapurple
+ }
+ .links{
+    display: grid;
+    place-items: center; 
+    gap: 10px;
+ }

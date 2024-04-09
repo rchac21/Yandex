@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Taxi Driver Data</title>
+    <link rel="stylesheet" href="{% static 'yandex/styles/show_driver_data.css' %}">
+</head>
+<body class="container">
+    <h1>Show Taxi Driver Data</h1>
+    <div class="driver_data">
+        <p>Name: {{ taxi_driver_data.name }}</p>
+        <p>Phone Number : {{ taxi_driver_data.phone_num }}</p>
+        <p>Car Series: {{ taxi_driver_data.car_series }}</p>
+        <p>Car Number: {{ taxi_driver_data.car_num }}</p>
+        <p>Car Color: {{ taxi_driver_data.car_color }}</p>
+        <p>Service Type: {{ taxi_driver_data.service_type }}</p>
+        <p>Distance from you to taxi driver: {{ distance }} km  -  Time: {{ distance_time }} minute</p>
+        <p>Distance: {{ distance2 }} km  -  Time: {{ distance_time2 }} minute</p>
+        <p>Amount: {{ amount }} Gel</p>
+    </div>
+
+    <a href="{% url 'login' %}">Login Page</a>
+</body>
+</html>

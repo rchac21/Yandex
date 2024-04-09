@@ -1,0 +1,17 @@
+.container {
+    display: grid;
+    place-items: center; 
+    gap: 40px;
+}
+h1{
+    background-color: rgb(161, 161, 216);
+}
+form{
+    display: grid;
+    place-items: center; 
+    gap: 10px;
+    background-color: aquamarine;
+}
+button{
+    color: blue;
+}

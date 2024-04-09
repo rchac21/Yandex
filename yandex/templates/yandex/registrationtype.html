@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Registration Type</title>
+    <link rel="stylesheet" href="{% static 'yandex/styles/registrationtype.css' %}">
+</head>
+<body class="container">
+    <h1>Choose Register Type</h1>
+    <div>
+        <div class="regist">
+            <p>if you want register as orderer click this link:</p>
+            <a href="{% url 'registration' 'orderer' %}">Registration As Orderer</a>
+        </div>
+        <div class="regist">
+            <p>if you want register as taxi driver click this link:</p>
+            <a href="{% url 'registration' 'taxi driver' %}">Registration As Taxi Driver</a>
+        </div>
+    </div>
+</body>
+</html>

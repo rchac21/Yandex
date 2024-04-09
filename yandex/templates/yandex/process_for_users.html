@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Main Page</title>
+    <link rel="stylesheet" href="{% static 'yandex/styles/process_for_users.css' %}">
+</head>
+<body class="container">
+    <h1>Main Page</h1>
+    <div class="links">
+        <div><a href="{% url 'work' personal_id %}">Work</a></div>
+        <div><a href="{% url 'process_for_orderers' personal_id %}">Call Taxi</a></div>
+    </div>
+    <div>
+        <form method="post">
+        <div>
+            {% csrf_token %}
+            <p class="delete_txt">if you want cancel as taxi driver click this: </p>
+            <button type="submit">cancel taxi driver</button>
+        </div>
+        </form>
+        <div class="cont2">
+            <p>if you want change account number follow this link:</p>
+            <a class="cont2a" href="{% url 'add_or_change_account_number' personal_id %}">Change Account Number</a>
+        </div>
+    </div>
+    <div class="login"><a href="{% url 'login' %}">Login Page</a></div>
+</body>
+</html>

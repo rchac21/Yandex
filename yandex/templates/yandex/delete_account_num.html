@@ -1,0 +1,16 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Delete Account Number</title>
+    <link rel="stylesheet" href="{% static 'yandex/styles/delete_account_num.css' %}">
+</head>
+<body class="container">
+    <h1>Delete Account Number</h1>
+    <form method="post">
+        {% csrf_token %}
+        <p>{{ name }} are you sure that you want delete account number ?</p>
+        <button type="submit" name="payment_method" value="cash">delete</button> 
+    </form>
+</body>
+</html>

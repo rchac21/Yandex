@@ -1,0 +1,14 @@
+.container {
+    display: grid;
+    place-items: center; 
+    gap: 30px;
+}
+h1{
+    background-color: rgb(236, 197, 197)
+ }
+ button{
+    width: 100px;
+    font-size: 2em;
+    background-color: rgb(233, 93, 93);
+    margin: 10px;
+}

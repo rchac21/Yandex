@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Reference Locations</title>
+    <link rel="stylesheet" href="{% static 'yandex/styles/process_for_orderers.css' %}">
+</head>
+<body class="container">
+    <h1>please reference start point and end point</h1>
+    <form method="post">
+        {% csrf_token %}
+        <p>{{ form.as_p }}</p>
+        <button type="submit">Submit</button>
+    </form>
+    {% if check %}
+       <div><a href="{% url 'process_for_users' personal_id %}">Main Page</a></div>
+    {% else %}
+       <div>
+           <p class="text">if you want add account number or change it follow this link:</p>
+           <a href="{% url 'add_or_change_account_number' personal_id %}">Add or Change Account Number</a>
+       </div>
+       {% if check2 %}
+        <div>
+            <p class="text">if you want to delete account number follow this link:</p>
+            <a href="{% url 'delete_account_num' personal_id %}">Delete Account Number</a>
+        </div>
+       {% endif %}
+    {% endif %}
+    <div>
+        <p class="text">if you want work as a taxi driver add data or if you are taxi driver and you want change data follow this link:</p>
+        <a href="{% url 'add_as_taxi_driver' personal_id %}">Add as Taxi Driver or Change Your Data</a>
+     </div>
+    <div class="login"><a href="{% url 'login' %}">Login Page</a></div>
+</body>
+</html>

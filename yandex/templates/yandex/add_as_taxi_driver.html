@@ -1,0 +1,16 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Add as taxi driver</title>
+    <link rel="stylesheet" href="{% static 'yandex/styles/add_as_taxi_driver.css' %}">
+</head>
+<body class="container">
+    <h1>Add as taxi driver</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">add taxi drivers</button>
+    </form>
+</body>
+</html>

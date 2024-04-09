@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Show Client Data</title>
+    <link rel="stylesheet" href="{% static 'yandex/styles/show_client_data.css' %}">
+</head>
+<body class="container">
+    <h1>Show Client Data</h1>
+    <div class="cli_data">
+        <p>Name: {{ name }}</p>
+        <p>Phone Number : {{ phone_num }}</p>
+        <p>Distance from you to taxi driver: {{ distance }} km  -  Time: {{ distance_time }} minute</p>
+        <p>Distance: {{ distance2 }} km  -  Time: {{ distance_time2 }} minute</p>
+        <p>Amount: {{ amount }} Gel</p>
+        <p>Service Type: {{ service_type }}</p>
+    </div>
+    <div class="links">
+        <div><a href="{% url 'work' personal_id %}">Work</a></div>
+        <div><a href="{% url 'process_for_users' personal_id %}">Main Page</a></div>
+        <div><a href="{% url 'login' %}">Login Page</a></div>
+    </div>
+</body>
+</html>

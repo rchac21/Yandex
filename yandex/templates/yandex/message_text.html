@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Message Text</title>
+    <link rel="stylesheet" href="{% static 'yandex/styles/message_text.css' %}">
+</head>
+<body class="container">
+    <h1>your order received,please wait...</h1>
+    <h3>If you want to cancel the order, please press the "DELETE ORDER" button</h3>
+    <form method="post">
+        {% csrf_token %}
+        <div><button type="submit">DELETE ORDER</button></div>
+    </form>
+    <a href="{% url 'login' %}">Login Page</a>
+</body>
+</html>

@@ -1,0 +1,29 @@
+.container {
+    display: grid;
+    gap: 30px;
+} 
+h1{
+    background-color: rgb(161, 161, 216);
+    text-align: center;
+}
+p{
+    color: blue;
+ }
+ button{
+    color: blue;
+ }
+ a{
+    color: blue;
+    display: inline;
+ }
+ .text{
+    display: inline;
+    color: red;
+ }
+form{
+    text-align: center;
+}
+.login{
+    text-align: center;
+    font-size: 1.2em;
+}

@@ -1,0 +1,16 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Delete</title>
+    <link rel="stylesheet" href="{% static 'yandex/styles/delete.css' %}">
+</head>
+<body class="container">
+    <h1>Delete Account</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Delete</button>
+    </form>
+</body>
+</html>
